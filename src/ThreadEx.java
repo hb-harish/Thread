@@ -8,9 +8,12 @@ public class ThreadEx
 		
 		Thread threadA = new CounterThread(counterA);
 		Thread threadB = new CounterThread(counterA);
+		Thread threadC = new Mom();
 		
 		threadA.start();
 		threadB.start();
+		threadC.start();
+		
 		
 	}
 	

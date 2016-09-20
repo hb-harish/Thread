@@ -11,9 +11,19 @@ public class CounterThread extends Thread
 		for (int i =0;i<10000; i++)
 		{
 			counter.add(100);
+			try {
+				this.sleep(30);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println(this.getName() + ":" + counter.getCounter());
 		}
 		System.out.println(this.getName() + ":" + counter.getCounter());
 	}
+	
+	
+
 
 	
 	
